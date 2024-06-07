@@ -1,0 +1,26 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  di = diff
+  dc = diff --cached
+  fe = fetch --prune
+  pure = pull --rebase
+  recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+[user]
+	name = Kacper Madej
+	email = kacperoza@gmail.com
+	signingkey = BBEC29A2A4C68C20CC4573C9678113E06DE51C9B
+[push]
+	default = current
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
+[http]
+	cookiefile = /Users/kacper/.gitcookies
+[core]
+   excludesfile = ~/.gitignore
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
