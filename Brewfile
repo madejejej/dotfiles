@@ -1,0 +1,46 @@
+tap "homebrew/cask"
+tap "1password/tap"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "stripe/stripe-cli"
+
+cask_args appdir: "~/Applications", require_sha: true
+
+cask "firefox"
+cask "google-crhome"
+cask "iterm2"
+
+brew "giflib"
+brew "libpng"
+brew "autoconf"
+brew "automake"
+brew "coreutils"
+brew "bash"
+brew "bat"
+brew "bottom"
+brew "pkg-config"
+brew "htop"
+brew "hub"
+brew "imagemagick"
+brew "jpeg", link: true
+brew "jq"
+brew "llvm"
+brew "lsd"
+brew "macvim" --with-lua
+brew "mas"
+brew "neovim"
+brew "overmind"
+brew "postgresql@15"
+brew "ruby-build"
+brew "rbenv"
+brew "redis"
+brew "telnet"
+brew "tldr"
+brew "tree"
+brew "z"
+brew "zsh-syntax-highlighting"
+brew "stripe/stripe-cli/stripe"
+cask "1password-cli"
+cask "docker", args: { appdir: "/Applications" }
+cask "fig"
+mas "Be Focused", id: 973134470

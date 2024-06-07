@@ -20,8 +20,9 @@ ZSH_THEME="robbyrussell"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+alias vim=nvim
 source $ZSH/oh-my-zsh.sh
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # User configuration
 
@@ -34,6 +35,8 @@ export LC_MESSAGES="en_us"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export HOMEBREW_BREWFILE=~/Brewfile
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -92,6 +95,10 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=yes
 
 # MISC
 alias cat="bat"
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -la"
+alias top=btm
 alias vl="vim ~/daily.log"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -153,3 +160,6 @@ export PATH="/Users/kacper/Library/Application Support/JetBrains/Toolbox/scripts
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
