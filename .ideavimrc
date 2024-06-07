@@ -1,0 +1,51 @@
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-matchit'
+
+let mapleader = ','
+set surround
+set ignorecase smartcase
+set incsearch hlsearch
+set multiple-cursors
+set ideajoin
+set sneak
+
+inoremap jj <Esc>
+
+nnoremap ; :
+
+map <leader>uu <Action>(FindUsages)
+map <leader>rf <Action>(RenameFile)
+map <leader>rr <Action>(RenameElement)
+map <leader>b <Action>(Back)
+map <leader>f <Action>(GotoFile)
+
+map <leader>tf <Action>(RerunFailedTests)
+map <leader>tr <Action>(RerunTests)
+map <leader>tt <Action>(TestTreePopupMenu)
+map <leader>ta <Action>(Run)
+
+nnoremap <leader>ev :e ~/.ideavimrc<cr>
+nnoremap <leader>rv :source ~/.ideavimrc<cr>
+nnoremap <leader>ej :e ~/Dropbox/journal.txt<cr>
+nnoremap <C-l> <c-w>l
+nnoremap <C-h> <c-w>h
+nnoremap <C-k> <c-w>k
+nnoremap <C-j> <c-w>j
+
+nnoremap <leader>/ :noh<CR>
+
+map <leader>gb <Action>(Annotate)
+
+map <leader>gcc <Action>(copilot.chat.show)
+map <leader>gho <Action>(Github.Open.In.Browser)
+map <leader>gho <Action>(Github.Open.In.Browser)
+map <leader>gvp <Action>(Github.View.Pull.Request)
+map <leader>cc <Action>(ActivateTerminalToolWindow)
+map <leader>l <Action>(NextTab)
+map <leader>h <Action>(PreviousTab)
+
+# bookmarks
+map <leader>bm <Action>(ToggleBookmark)
+map <leader>bn <Action>(GotoNextBookmark)
+map <leader>bp <Action>(GotoPreviousBookmark)
