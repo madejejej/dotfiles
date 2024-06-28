@@ -2,7 +2,7 @@
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kacper/.oh-my-zsh"
+export ZSH="/Users/madejejej/.oh-my-zsh"
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -45,8 +45,7 @@ export HOMEBREW_BREWFILE=~/Brewfile
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(github z git ruby macos)
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-. ~/.oh-my-zsh/plugins/z/z.sh
+. ~/.oh-my-zsh/plugins/z/z.plugin.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -103,54 +102,21 @@ alias vl="vim ~/daily.log"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/Library/Python/3.11/bin:$PATH"
-eval "$(rbenv init -)"
 
 autoload -U compinit && compinit
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source "$HOME/.castle"
-
-export GITHUB_TOKEN="$(op read op://Personal/github_token/password --account my.1password.com)"
-export BUNDLE_GITHUB__COM="x-access-token:$GITHUB_TOKEN"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-# added by Snowflake SnowSQL installer v1.2
-export PATH=/Users/kacper/Applications/SnowSQL.app/Contents/MacOS:$PATH
-
+#export GITHUB_TOKEN="$(op read op://Personal/github_token/password --account my.1password.com)"
+#export BUNDLE_GITHUB__COM="x-access-token:$GITHUB_TOKEN"
 
 ulimit -n 10240
 eval $(/opt/homebrew/bin/brew shellenv)
 export PATH="/usr/local/sbin:$PATH"
-#export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/sbin:/usr/local/opt/python@3.8/bin:/Users/kacper/Applications/SnowSQL.app/Contents/MacOS:/Users/kacper/.cargo/bin:/Users/kacper/.yarn/bin:/Users/kacper/.config/yarn/global/node_modules/.bin:/Users/kacper/.luarocks/bin:/Users/kacper/google-cloud-sdk/bin:/Users/kacper/.nodenv/shims:/Users/kacper/esp/xtensa-esp32-elf/bin:/Users/kacper/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/local/munki:/Applications/Wireshark.app/Contents/MacOS'"
 
-# NVM
-NVM_DIR="$HOME/.nvm"
-export NVM_DIR
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 export GPG_TTY=$(tty)
 
 autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
 
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
@@ -160,6 +126,3 @@ export PATH="/Users/kacper/Library/Application Support/JetBrains/Toolbox/scripts
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

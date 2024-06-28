@@ -1,15 +1,17 @@
-tap "homebrew/cask"
 tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "stripe/stripe-cli"
 
-cask_args appdir: "~/Applications", require_sha: true
+cask_args appdir: "~/Applications"
 
 cask "firefox"
-cask "google-crhome"
+cask "google-chrome"
 cask "iterm2"
 cask "jetbrains-toolbox"
+cask "spotify"
+cask "signal"
+cask "slack"
 
 brew "giflib"
 brew "libpng"
@@ -27,7 +29,7 @@ brew "jpeg", link: true
 brew "jq"
 brew "llvm"
 brew "lsd"
-brew "macvim" --with-lua
+brew "macvim"
 brew "mas"
 brew "neovim"
 brew "overmind"
@@ -46,4 +48,10 @@ brew "stripe/stripe-cli/stripe"
 cask "1password-cli"
 cask "docker", args: { appdir: "/Applications" }
 cask "fig"
+cask "jetbrains-toolbox"
+cask "1password"
+cask "dropbox"
+cask "rectangle"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
 mas "Be Focused", id: 973134470
