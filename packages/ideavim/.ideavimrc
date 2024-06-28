@@ -42,7 +42,6 @@ map <leader>gb <Action>(Annotate)
 
 map <leader>gcc <Action>(copilot.chat.show)
 map <leader>gho <Action>(Github.Open.In.Browser)
-map <leader>gho <Action>(Github.Open.In.Browser)
 map <leader>gvp <Action>(Github.View.Pull.Request)
 map <leader>cc <Action>(ActivateTerminalToolWindow)
 map <leader>l <Action>(NextTab)
