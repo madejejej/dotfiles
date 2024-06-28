@@ -11,12 +11,12 @@
   signingkey = BBEC29A2A4C68C20CC4573C9678113E06DE51C9B
 [push]
   default = current
-[commit]
-  gpgsign = true
+#[commit]
+#gpgsign = true
 [gpg]
   program = gpg2
 [http]
-  cookiefile = /Users/kacper/.gitcookies
+  cookiefile = /Users/madejejej/.gitcookies
 [core]
   excludesfile = ~/.gitignore
 [filter "lfs"]

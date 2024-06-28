@@ -107,8 +107,6 @@ autoload -U compinit && compinit
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#export GITHUB_TOKEN="$(op read op://Personal/github_token/password --account my.1password.com)"
-#export BUNDLE_GITHUB__COM="x-access-token:$GITHUB_TOKEN"
 
 ulimit -n 10240
 eval $(/opt/homebrew/bin/brew shellenv)
@@ -126,3 +124,6 @@ export PATH="/Users/kacper/Library/Application Support/JetBrains/Toolbox/scripts
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+export GITHUB_TOKEN="$(op read op://Personal/github_token/password --account my.1password.com)"
+export BUNDLE_GITHUB__COM="x-access-token:$GITHUB_TOKEN"
