@@ -105,6 +105,8 @@ export PATH="$HOME/Library/Python/3.11/bin:$PATH"
 
 autoload -U compinit && compinit
 
+eval "$(rbenv init -)"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
