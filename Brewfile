@@ -18,6 +18,7 @@ cask "slack"
 
 brew "giflib"
 brew "libpng"
+brew "libpq"
 brew "autoconf"
 brew "automake"
 brew "coreutils"

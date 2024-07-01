@@ -37,6 +37,8 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlightin
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_BREWFILE=~/Brewfile
+eval $(/opt/homebrew/bin/brew shellenv)
+export PATH="/usr/local/sbin:$PATH"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -105,18 +107,15 @@ export PATH="$HOME/Library/Python/3.11/bin:$PATH"
 
 autoload -U compinit && compinit
 
-eval "$(rbenv init -)"
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
 ulimit -n 10240
-eval $(/opt/homebrew/bin/brew shellenv)
-export PATH="/usr/local/sbin:$PATH"
 
 export GPG_TTY=$(tty)
 
 autoload -U add-zsh-hook
+eval "$(rbenv init -)"
+. "$HOME/.cargo/env"
 
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
@@ -128,4 +127,5 @@ export PATH="/Users/kacper/Library/Application Support/JetBrains/Toolbox/scripts
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 export GITHUB_TOKEN="$(op read op://Personal/github_token/password --account my.1password.com)"
+export BUNDLE_RUBYGEMS__PKG__GITHUB__COM="$(op read op://Slabstone/github_packages_personal_access_token/password --account my.1password.com)"
 export BUNDLE_GITHUB__COM="x-access-token:$GITHUB_TOKEN"
