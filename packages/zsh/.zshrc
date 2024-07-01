@@ -36,7 +36,7 @@ export LC_MESSAGES="en_us"
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export HOMEBREW_BREWFILE=~/Brewfile
+export HOMEBREW_BUNDLE_FILE=~/Brewfile
 eval $(/opt/homebrew/bin/brew shellenv)
 export PATH="/usr/local/sbin:$PATH"
 

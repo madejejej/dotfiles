@@ -16,6 +16,7 @@ cask "spotify"
 cask "signal"
 cask "slack"
 
+brew "asdf"
 brew "giflib"
 brew "libpng"
 brew "libpq"
