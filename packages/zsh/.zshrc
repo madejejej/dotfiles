@@ -122,10 +122,18 @@ export LIBRARY_PATH=/opt/homebrew/lib
 
 export PATH="/Users/kacper/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
 
+export GITHUB_TOKEN="$(op read op://Personal/github_token/password --account my.1password.com)"
+export BUNDLE_RUBYGEMS__PKG__GITHUB__COM="$(op read op://Slabstone/github_packages_personal_access_token/password --account my.1password.com)"
+export BUNDLE_GITHUB__COM="x-access-token:$GITHUB_TOKEN"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-export GITHUB_TOKEN="$(op read op://Personal/github_token/password --account my.1password.com)"
-export BUNDLE_RUBYGEMS__PKG__GITHUB__COM="$(op read op://Slabstone/github_packages_personal_access_token/password --account my.1password.com)"
-export BUNDLE_GITHUB__COM="x-access-token:$GITHUB_TOKEN"
+# Created by `pipx` on 2024-07-11 15:15:36
+export PATH="$PATH:/Users/madejejej/.local/bin"
+if [ -f "/Users/madejejej/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/madejejej/.config/fabric/fabric-bootstrap.inc"; fi
+
+eval "$(direnv hook zsh)"
