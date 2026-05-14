@@ -33,9 +33,6 @@ nnoremap <C-h> <c-w>h
 nnoremap <C-k> <c-w>k
 nnoremap <C-j> <c-w>j
 
-map <C-e> <Action>(NextTab)
-map <C-w> <Action>(PreviousTab)
-
 nnoremap <leader>/ :noh<CR>
 
 map <leader>gb <Action>(Annotate)
@@ -43,11 +40,15 @@ map <leader>gb <Action>(Annotate)
 map <leader>gcc <Action>(copilot.chat.show)
 map <leader>gho <Action>(Github.Open.In.Browser)
 map <leader>gvp <Action>(Github.View.Pull.Request)
+map <leader>gci <Action>(Git.Commit.Stage)
+
 map <leader>cc <Action>(ActivateTerminalToolWindow)
-map <leader>l <Action>(NextTab)
-map <leader>h <Action>(PreviousTab)
+map <leader>e <Action>(NextTab)
+map <leader>w <Action>(PreviousTab)
+map <C-e> <Action>(NextTab)
+map <C-w> <Action>(PreviousTab)
 
 # bookmarks
-map <leader>bm <Action>(ToggleBookmark)
-map <leader>bn <Action>(GotoNextBookmark)
-map <leader>bp <Action>(GotoPreviousBookmark)
+map <leader>mm <Action>(ToggleBookmark)
+map <leader>mn <Action>(GotoNextBookmark)
+map <leader>mp <Action>(GotoPreviousBookmark)

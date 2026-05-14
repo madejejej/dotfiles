@@ -8,13 +8,14 @@
 [user]
   name = Kacper Madej
   email = kacperoza@gmail.com
-  signingkey = BBEC29A2A4C68C20CC4573C9678113E06DE51C9B
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ84l751sTGUUMn6gq63zeXoCtOwsK5p3VxiaZKrL1RK
 [push]
   default = current
 #[commit]
 #gpgsign = true
 [gpg]
   program = gpg2
+	format = ssh
 [http]
   cookiefile = /Users/madejejej/.gitcookies
 [core]
@@ -24,3 +25,12 @@
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
+
+[diff "csv"]
+  textconv = "csvdiff"
+[commit]
+	gpgsign = true
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[url "git@github.com:"]
+	insteadof = https://github.com/
