@@ -56,7 +56,6 @@ plugins=(github z git ruby macos)
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # GIT ALIASES
-alias git=hub
 alias g=git
 alias ga="git add"
 alias gs="git status"

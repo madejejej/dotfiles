@@ -1,6 +1,4 @@
 tap "1password/tap"
-tap "homebrew/bundle"
-tap "homebrew/services"
 
 cask_args appdir: "~/Applications"
 
@@ -28,7 +26,6 @@ brew "libpq"
 brew "pkg-config"
 brew "htop"
 brew "imagemagick"
-brew "jpeg", link: true
 brew "jq"
 brew "llvm"
 brew "lsd"
